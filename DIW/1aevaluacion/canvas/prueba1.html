@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rectangulos</title>
+  </head>
+  <center>
+  <body>
+    <canvas id="lienzo" width="300" height="300" style="border: 1px solid black;"></canvas>
+    <script type="text/javascript">
+
+      let canvas = document.getElementById('lienzo');
+      if(canvas.getContext){
+      let ctx = canvas.getContext('2d');
+
+      ctx.fillRect(50,50,200,200);
+      ctx.strokeRect(75,75,100,100);
+      ctx.clearRect(75,75,150,150);
+
+      ctx.fillRect(100,100,100,100);
+      ctx.clearRect(112,112,75,75)
+
+      ctx.fillRect(125,125,50,50);
+      ctx.clearRect(135,135,30,30);
+
+      ctx.fillRect(142,142,15,15);
+
+      }
+
+
+
+
+    </script>
+
+  </body>
+  </center>
+</html>

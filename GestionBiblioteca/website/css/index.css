@@ -1,0 +1,74 @@
+*{
+text-align: center;
+  color: white;
+  font-family: cursive;
+
+  font-size: 1em;
+}
+
+
+h1{
+  font-size: 1.2em;
+}
+h2{
+  font-size: 1.1em;
+}
+
+h1:active,h2:active{
+  color: gold;
+}
+
+p:hover{
+  color: goldenrod;
+  transition: 2s;
+}
+
+input {
+  color: black;
+  font-size: 30px;
+  font-style: oblique;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+p{
+  font-size: 15px;
+  display: inline;
+}
+
+.content{
+  margin-top: 2%;
+  position: relative;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+
+}
+
+.submit{
+  color: black;
+  border-radius: 0;
+  width: auto;
+}
+
+.submit:hover{
+filter: brightness(200%);
+background-color: black;
+color: white;
+border: 3px solid black;
+}
+
+.logo:hover{
+  transform: rotate(360deg);
+  transition: 1s;
+  border-radius: 40%;
+  filter: brightness(1000%);
+
+}
+
+#video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+}

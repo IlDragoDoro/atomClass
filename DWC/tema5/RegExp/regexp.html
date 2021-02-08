@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>RegExp</title>
+  </head>
+  <body>
+    <h3>Validando datos con RegExp:</h3>
+    <p id="telefono"></p>
+    <p id="tel2"></p>
+    <p id="fecha"></p>
+    <p id="cp"></p>
+    <p id="mail"></p>
+    <p id="entero"></p>
+    <p id="real"></p>
+    <p id="minusculas"></p>
+    <p id="mayusculas"></p>
+    <p id="hora"></p>
+    <p>Introduce una tarjeta Visa, MasterCard, Discover, American, Diners o JCB</p>
+    <label>Tarjeta: </label> <input type="text"  id="tarjeta">
+    <p id="tarok"></p>
+    <script type="text/javascript">
+    window.onload=()=>{
+      //Cojo todos los <p>
+        let telefono = document.getElementById("telefono");
+        let tel2 = document.getElementById("tel2");
+        let fecha = document.getElementById("fecha");
+        let cp= document.getElementById("cp");
+        let mail = document.getElementById("mail");
+        let entero = document.getElementById("entero");
+        let real=document.getElementById("real");
+        let minusculas = document.getElementById("minusculas");
+        let mayusculas = document.getElementById("mayusculas");
+        let hora = document.getElementById("hora");
+        let tarok = document.getElementById("tarok");
+      //Ejercicio 1:
+        let telefon = "650917754";
+        let RegExpTelefono = /[0-9]{9}/g;
+        if(telefon.match(RegExpTelefono)){
+          telefono.innerHTML="El teléfono es valido: " + telefon;
+        }else{
+          telefono.innerHTML="El teléfono no es valido: " + telefon;
+        }
+        //Ejercicio 2:
+        let tele2 = "(+34)650917754";
+        let regExpTele2 = /\(\+[0-9]{2}\)[0-9]{9}/;
+        if(tele2.match(regExpTele2)){
+          tel2.innerHTML="El telefono 2 es válido: " + tele2;
+        }else{
+          tel2.innerHTML="El telefono 2 no es válido: " + tele2;
+        }
+        //Ejercicio 3:
+        let date = "21/04/1997";
+        let regExpFecha = /([0-2][0-9]|3[0-1])(\/)(0[1-9]|1[0-2])\2(\d{4})/g;
+        if(date.match(regExpFecha)){
+          fecha.innerHTML="La fecha es correcta: " + date;
+        }else{
+          fecha.innerHTML="La fecha no es correcta: " + date;
+        }
+        //Ejercicio 4:
+        let cod = "07011";
+        let regExpCode = /^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/g;
+        if(cod.match(regExpCode)){
+          cp.innerHTML="El código es valido: " + cod;
+        }else{
+          cp.innerHTML="El código no es valido: " + cod;
+        }
+        //Ejercicio 5:
+        let email = "vicen333@gmail.com";
+        let regExpEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        if(email.match(regExpEmail)){
+          mail.innerHTML="El email es correcto: " + email;
+        }else{
+          mail.innerHTML="El email no es correcto: " + email;
+        }
+        //Ejercicio 6:
+        let enter = "+13";
+        let regExpEntero = /^(\+|\-)?[0-9]+$/g;
+        if(enter.match(regExpEntero)){
+          entero.innerHTML="El número entero es correcto: " + enter;
+        }else{
+          entero.innerHTML="El número entero no es correcto: " + enter;
+        }
+        //Ejercicio 7:
+        let rial = "-14,25";
+        let regExpReal = /^(\+|\-)?[0-9]+(\.|\,){1}?[0-9]+/g;
+        if(rial.match(regExpReal)){
+            real.innerHTML="El número real es valido: " + rial;
+      }else{
+          real.innerHTML="El número real no es valido: " + rial;
+        }
+        //Ejercicio 8:
+        let minus = "Hola como estas";
+        let regExpMinusculas = /^(?:.*[a-z])+$/g;
+        if(minus.match(regExpMinusculas)){
+          minusculas.innerHTML="Esta frase tiene minusculas: " + minus;
+        }else{
+          minusculas.innerHTML="Esta frase no tiene minusculas: " + minus;
+        }
+        //Ejercicio 9:
+        let mayus = "Hola";
+        let regExpMayus = /^(?:.*[A-Z])+/g;
+        if(mayus.match(regExpMayus)){
+          mayusculas.innerHTML="Esta frase tiene mayusculas: " + mayus;
+        }else{
+          mayusculas.innerHTML="Esta frase no tiene mayusculas: " + mayus;
+        }
+        //Ejercicio 10:
+        let time = "10:04";
+        let regExpTime = /[0-3]{2}\:[0-59]{2}/g;
+        if(time.match(regExpTime)){
+          hora.innerHTML="La hora es correcta: " + time + "h";
+        }else{
+          hora.innerHTML="La hora no es correcta: " + time + "h";
+        }
+        //Ejercicio 11:
+        let tarjeta = document.getElementById("tarjeta");
+        let regExpVisa = /^4[0-9]{15}$/g;
+        let regExpMaster = /5[1-5][0-9]{14}$/g;
+        let regExpDiscover = /^6(?:011|5[0-9]{2})[0-9]{12}$/g;
+        let regExpAmerican = /^3[47][0-9]{13}$/g;
+        let regExpDiners = /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/g;
+        let regExpJCB = /^(3(?:088|096|112|158|337|5(?:2[89]|[3-8][0-9]))\d{12})$/g;
+        tarjeta.onkeyup=()=>{
+          let num = tarjeta.value;
+          if(num.match(regExpVisa)){
+            tarok.innerHTML="La tarjeta introducida es: " + num  + " \n y es de tipo Visa ";
+          }else if(num.match(regExpMaster)){
+            tarok.innerHTML="La tarjeta introducida es: " + num  + " \n y es de tipo MasterCard";
+          }else if(num.match(regExpDiscover)){
+            tarok.innerHTML="La tarjeta introducida es: " + num  + " \n y es de tipo Discover";
+          }else if(num.match(regExpAmerican)){
+            tarok.innerHTML="La tarjeta introducida es: " + num  + " \n y es de tipo American Express";
+          }else if(num.match(regExpDiners)){
+            tarok.innerHTML="La tarjeta introducida es: " + num  + " \n y es de tipo Diners";
+          }else if(num.match(regExpJCB)){
+            tarok.innerHTML="La tarjeta introducida es: " + num  + " \n y es de tipo JCB";
+          }else{
+            tarok.innerHTML="La tarjeta no es valida";
+          }
+
+        }
+
+    }
+    </script>
+  </body>
+</html>

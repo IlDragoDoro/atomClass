@@ -1,0 +1,33 @@
+<?php
+class Oca{
+    public $d1;
+    public $d2;
+    public $contador;
+    
+    public function __construct($d1,$d2){
+        $d1 = rand(0,12);
+        $d2 = rand(0,12);
+        $this->d1=$d1;
+        $this->d2=$d2;
+        $this->contador=$contador;
+        print "<h1>OCA</h1>";
+        print "Dado 1  = ".$d1."<br>Dado 2 = ".$d2."";
+        $this->contador++;
+    }
+
+    public function __destruct(){
+        
+            if($this->d1 == 12 || $this->d2 == 12 ||($this->d1+$this->d2)==12){ 
+                $this->contador=$contador+1;
+                print "<br>Felicidades,has sacado el numero 12 tras ".$this->contador." intentos.";          
+            }else{
+                $this->contador++; 
+                
+            }
+            $this->contador++;
+        }
+        
+}
+
+$oca = new Oca($d1,$d2);
+?>

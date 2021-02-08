@@ -1,0 +1,23 @@
+
+  .btn_search{
+    height: 30px;
+    position: absolute;
+    margin-left: 53%;
+    margin-top: -30px;
+  }
+  .btn_search:hover{
+    border: 1px solid goldenrod;
+    border-radius: 5%;
+    filter: brightness(105%);
+    transition: 1s;
+  }
+
+  .search_bar{
+    position: absolute;
+    font-family: cursive;
+    text-align: center;
+    height: 25px;
+    width: 20%;
+    margin-left: 32%;
+    margin-top: -30px;
+  }

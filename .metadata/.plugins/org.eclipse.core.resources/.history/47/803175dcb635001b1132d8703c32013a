@@ -1,0 +1,21 @@
+<?php
+class Oca{
+    public $d1;
+    public $d2;
+    public $contador=0;
+    public function __construct(){
+        $d1 = rand(0,12);
+        $d2 = rand(0,12);
+        print "<h1>OCA</h1>";
+        print "Dado 1  = ".$d1."<br>Dado 2 = ".$d2."";
+    }
+    
+    public function __destruct(){
+        while($d1 != 12 && $d2 != 12 && $d1 + $d2 != 12){
+           $contador++;
+        }
+    }
+}
+
+$oca = new Oca();
+?>

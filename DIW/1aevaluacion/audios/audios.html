@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="audios.js"></script>
+    <link rel="stylesheet" href="audios.css">
+    <title>Reproductor de audio</title>
+  </head>
+  <center>
+  <body>
+
+<audio id="sonido">
+<source id="rutaAudio" src="TheDragonRadio.mp3" type="audio/mp3">
+  </audio>
+  <div class="cabezal">
+<h1>The Dragon festival</h1>
+<h3 id="txt" style="color:white;">Now playing:</h3>
+<img class="uno" src="altavoz.gif" >
+<img class="dos" src="altavoz.gif" >
+  </div>
+  <div class="botones">
+    <button onclick="shuffle()" type="button" name="button"><img src="shuffle.png" alt=""></button>
+    <button onclick="stop()" type="button" name="button"><img src="stop.png" alt=""></button>
+    <button onclick="atras()" type="button" name="button"><img src="atras.png" alt=""></button>
+    <button  onclick="iniciar()" type="button" name="button"><img src="play.png" alt=""></button>
+    <button onclick="pause()" type="button" name="button"><img src="pause.png" alt=""></button>
+    <button onclick="alante()" type="button" name="button"><img src="alante.png" alt=""></button>
+    <button onclick="mas()" type="button" name="button"><img src="mas.png" alt=""></button>
+    <button onclick="menos()" type="button" name="button"><img src="menos.png" alt=""></button>
+    <p id="volumen" style="color:white;"></p>
+  </div>
+  </body>
+</center>
+  <script type="text/javascript">
+      var cancion = document.getElementById("sonido");
+      var canciones = ["TheDragonRadio.mp3","dragon.mp3","vinivici.ogg","yab.wav"];
+      var i = 0;
+      var random;
+      var txt = document.getElementById("txt");
+      var volumen = document.getElementById("volumen");
+      function iniciar(){
+      cancion.play();
+      cancion.volume=1;
+      txt.innerHTML="Now playing: " +canciones[0];
+      }
+      function pause(){
+      cancion.pause();
+      txt.innerHTML="Now paused!";
+      }
+      function stop(){
+        cancion.pause();
+        cancion.currentTime=0;
+        txt.innerHTML="Now stopped!";
+      }
+      function atras(){
+        if( i == 0){
+          i = canciones.length-1;
+        }else {
+          i=i-1;
+        }
+        rutaAudio=canciones[i];
+        document.getElementById("rutaAudio").src=rutaAudio;
+        document.getElementById("sonido").load();
+        cancion.currentTime=0;
+        cancion.play();
+        txt.innerHTML="Now playing:" + canciones[i];
+      }
+
+      function alante(){
+        if( i < canciones.length-1){
+          i = i+1;
+        }else {
+          i=0;
+        }
+        rutaAudio=canciones[i];
+        document.getElementById("rutaAudio").src=rutaAudio;
+        document.getElementById("sonido").load();
+        cancion.currentTime=0;
+        cancion.play();
+        txt.innerHTML="Now playing:" + canciones[i];
+      }
+      function shuffle(){
+        random=Math.floor(Math.random(0)*canciones.length);
+        rutaAudio=canciones[random];
+        document.getElementById("rutaAudio").src=rutaAudio;
+        document.getElementById("sonido").load();
+        cancion.currentTime=0;
+        cancion.play();
+        txt.innerHTML="Now playing:" + canciones[i];
+
+
+      }
+      function mas(){
+        if(cancion.volume <= 1){
+          cancion.volume+=0.1;
+          volumen.innerHTML="Subiendo volumen: " + cancion.volume;
+        }
+      }
+      function menos(){
+        if(cancion.volume >=0){
+          cancion.volume-=0.1;
+          volumen.innerHTML="Bajando volumen: " + cancion.volume;
+        }
+      }
+  </script>
+  <center>
+  <video autoplay muted loop id="video">
+  <source id="video" src="dragon.mp4" type="video/mp4">
+</video>
+</center>
+</html>

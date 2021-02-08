@@ -1,0 +1,27 @@
+div{
+  margin: .4em 0;
+}
+
+div label{
+  width: 25%;
+  float: left;
+}
+
+fieldset{
+  margin-right: 1000px;
+}
+
+div button{
+  background-color: #C56767;
+  color: white;
+  font-size: 1.5em;
+  width: 200px;
+  height: 50px;
+  padding-top: 20px;
+  filter: blur(1px);
+}
+
+div button:hover{
+  filter: blur(4px);
+  cursor: pointer;
+}

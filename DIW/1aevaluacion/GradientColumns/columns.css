@@ -1,0 +1,63 @@
+.header{
+  margin-top: -15px;
+  text-align: center;
+  border-radius: 20%;
+  background-image: linear-gradient(to bottom right,grey,lightblue,blue);
+  height: 80px;
+}
+.header h1{
+  padding-top: 15px;
+}
+.menu{
+  background-color: black;
+  height: auto;
+  width: 100%;
+
+}
+
+nav ol{
+  margin-top: -5px;
+  background-color: #020732;
+}
+nav li{
+  padding-top: 10px;
+  display: inline-block;
+  background-color: #020732;
+  color:white;
+  height: 40px;
+  width: 24%;
+  text-align: center;
+
+}
+nav li:hover{
+  background-color: #DDDDDD;
+  color: black;
+}
+.contenido{
+  margin-left: 70px;
+}
+
+.contenido img{
+  width: 40px;
+  height: 40px;
+}
+
+.contenido h3{
+display: inline;
+}
+.con{
+  position: relative;
+  display: inline-block;
+  width: 24%;
+  line-height: 15px;
+}
+
+.pie{
+  border-radius: 0% 50% 0% 40%;
+  background-image: linear-gradient(to bottom right,grey,lightblue,blue);
+  height: 80px;
+}
+
+.pie h2{
+padding: 25px;
+}

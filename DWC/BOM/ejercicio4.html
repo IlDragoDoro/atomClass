@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>cookiesss</title>
+    <script src="ejercicio4.js"></script>
+    <style media="screen">
+      .sesion{
+        margin-top: 5%;
+        border:1px solid black;
+        width: 25%;
+        padding: 1%;
+        font-size: 1.5em;
+        font-style:oblique;
+      }
+      h2{
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <center>
+  <body>
+    <h1>Inicia sesión:</h1>
+<div class="sesion">
+  <h2>Nombre:</h2>
+  <input id="nombre" type="text" placeholder="Nombre:">
+  <h2>Apellidos</h2>
+  <input id="apellidos" type="text" placeholder="apellidos:"><br><br>
+  <button type="button" name="button" onclick="guardarCookie()">Entrar</button>
+  <button type="button" name="button" onclick="alert(document.cookie)">comprobar</button>
+  <p id="txt"></p>
+</div>
+  </body>
+  </center>
+</html>

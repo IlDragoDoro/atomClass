@@ -1,0 +1,37 @@
+<!--    Funciones para dibujar con canvas    -->
+
+<!-- 1. Crear el Lienzo -->
+
+<!-- Primero se crea el canvas dentro del html y un script,se puede poner borde -->
+<!-- Después se coge el canvas: document.getElementById -->
+<!-- Se comprueba si hay canvas: if(canvas.getContext) -->
+<!-- Se hace una variable para contexto 2d: let ctx = canvas.getContext('2d'); -->
+
+<!-- 2. Dibujar rectangulo/cuadrado   -->
+
+<!-- X,Y son coordenadas donde irá el rectangulo y luego es ancho x altura -->
+<!-- "fillRect(x,y,50,50);" dibujaría un cuadrado relleno negro -->
+<!-- "strokeRect(x,y,5,50);" solo haría el contorno  -->
+<!-- con "clearRect(x,y,50,50);" borrarias un area dentro del rectangulo -->
+
+<!-- 3. Dibujar trazos -->
+<!-- Para los trazos hay 4 funciones:  -->
+<!-- 1: "beginPath()" crea un nuevo trazo  -->
+<!-- 2: "Stroke()" Dibuja el contorno de la forma   -->
+<!-- 3: "fill()" Dibuja una forma solida rellenando el área del trazo -->
+<!-- 4: "closePath()" cierra el trazo -->
+<!-- ATENCIÓN, cuando el trazo esté vacio empezar con un moveTo();  -->
+<!-- con fill() todas las formas abiertas se cierran automaticamente -->
+
+<!-- 4. Mover "La pluma" -->
+
+<!-- con "moveTo()" puedes mover y decidir
+a partir de que punto y hacia donde hacer un trazo -->
+
+<!-- 5. Dibujar lineas -->
+
+<!-- Empiezas con "beginPath();" -->
+<!-- Pones "la pluma" en posición con "moverTo(x,y);" -->
+<!-- creas una linea con "lineTo(x,y);"-->
+<!-- Cierras el path con "closePath();" -->
+<!-- La haces visible con "stroke();" -->

@@ -1,0 +1,36 @@
+.left{
+  float: left;
+  position: relative;
+  margin-top: 3%;
+  width: 40%;
+  height: 40%;
+}
+
+.horarios{
+  width: 25%; 
+}
+
+.formulario{
+  width: 50%;
+  height: 60%;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.formulario textarea{
+  width: 80%;
+  height: 80%;
+}
+
+.right{
+  float: right;
+  position: relative;
+  margin-top: 3%;
+  width: 49%;
+  height: 49%;
+}
+
+.mssg{
+  float: right;
+  margin-right: 20%;
+}

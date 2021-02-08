@@ -1,0 +1,46 @@
+.header{
+  margin-left: 15%;
+  margin-top: -90px;
+  padding-right: 100px;
+  float: inherit;
+  margin-bottom: -3%;
+
+}
+
+.header a{
+  padding: 2%;
+  color: black;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 1.3em;
+  float: inherit;
+}
+
+.header a:hover{
+  color: goldenrod;
+  transition: 0.4s;
+}
+
+.header a:active{
+  background-position: left;
+  background-color: blue;
+}
+
+.logoUp{
+  margin-left: 3%;
+  float: inherit;
+}
+
+.salida{
+  float: right;
+  position: relative;
+  width: 5%;
+  height:50px;
+  margin-top: -50px;
+}
+
+.perfil{
+  position:absolute;
+  margin-left: 41%;
+  margin-top: -70px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio</title>
+    <script src="ejercicio1.js"></script>
+    <style media="screen">
+      #bicicles{
+        display: inline-block;
+        vertical-align: top;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <form   method="get">
+      <label for="name">Name: </label><input id="name" type="text" placeholder="Name"><br><br>
+      <textarea id="textarea" rows="4" cols="60" placeholder="Bon dia tot lo dia"></textarea><br><br>
+      <label for="m">M</label><input id="m" type="radio"><label for="w">W</label><input id="w" type="radio"><br><br>
+      <input type="checkbox" id="havebicicle"><label for="tienebici">I have a bicicle</label><br><br>
+      <select id="bicicles" size="6" multiple disabled>
+        <option>Decathlon</option>
+        <option>BH</option>
+        <option>Trek</option>
+        <option>Orbea</option>
+        <option>Tucano</option>
+        <option>Ridley</option>
+      </select><br><br>
+      <input id="havecar" type="checkbox"><label for="havecar">I have a car</label><br><br>
+      <select id="cars" size="1" disabled>
+        <option>Opel</option>
+        <option>Lamborghini</option>
+        <option>Peugeot</option>
+        <option>Ferrari</option>
+        <option>Tesla</option>
+        <option>Seat</option>
+      </select><br><br>
+      <input id="submit" type="submit" value="validar">
+    </form>
+    <h3 id="txt"></h3>
+  </body>
+</html>
