@@ -3,9 +3,68 @@
   <head>
     <meta charset="utf-8">
     <title>Ejercicio 6</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="ejercicio6.js"></script>
+    <style media="screen">
+      th{
+        padding: 5px;
+      }
+      td{
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-8">
+          <table border="1px solid black">
+            <thead>
+                <th>Position</th>
+                <th>  Team  </th>
+                <th>  Points</th>
+                <th>        </th>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mallorca</td>
+                  <td>50</td>
+                  <td> <button id="select" type="button" name="button">Select</button> <button id="delete" type="button" name="button">Delete</button> <button id="update" type="button" name="button">Update</button> </td>
+                </tr>
+                <tr>
+                  <td id="position">1</td>
+                  <td id="team">Mallorca</td>
+                  <td id="points">50</td>
+                  <td> <button id="select" type="button" name="button">Select</button> <button id="delete" type="button" name="button">Delete</button> <button id="update" type="button" name="button">Update</button> </td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-4 border" style="padding:10px;">
+          <form  method="get">
+            <div class="form-group">
+              <p>Position:</p>
+              <input id="uno" class="form-control" type="number">
+            </div>
+            <div class="form-group">
+              <p>Team:</p>
+              <input id="dos" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <p>Points:</p>
+              <input id="tres" class="form-control" type="number">
+            </div>
+            <input id="insert" type="button" value="Insert"> <input id="cancel" type="button" value="Cancel">
+          </form>
+        </div>
+      </div>
 
+    </div>
   </body>
 </html>
