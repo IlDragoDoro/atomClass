@@ -23,13 +23,11 @@ var puntos = "";
 $(this).parents('tr').find('#points').each(function(){
   puntos += $(this).html() + "\n";
 });
-console.log(posiciones);
+
 $('#uno').val(posiciones[0]);
 $('#dos').val(equipos);
 $('#tres').val(puntos[0]+puntos[1]+puntos[2]);
-
 });
-
 
 $('#insert').click(function(){
   var position = $('#uno').val();
