@@ -1,4 +1,5 @@
 <?php
+//Todos los use para cada controlador
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController;
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Mail;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Todas las rutas
 Route::get('/', function () {
     return view('welcome');
 });

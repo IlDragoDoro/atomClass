@@ -11,21 +11,22 @@ use Illuminate\Support\Facades\Mail;
 class sugerenciasController extends Controller
 {
     public function __invoke(){
-      return view('sugerencias');
+      return view('sugerencias'); //Devuelve la vista
     }
 
-    public function guarda(Request $request){
-      $data = $request->input();
+    public function guarda(Request $request){ //función para guardar la sugerencia
+      $data = $request->input();//Pido los datos de los inputs
       $nombre = $data['nombre'];
       $email = $data['email'];
       $sugerencia=$data['sugerencia'];
-      View::share('ver',$sugerencia);
+      //He guardado toda la info en variables
+      View::share('ver',$sugerencia); //Hago un share de la sugerencia
       try{
-        $mail = new sugerenciasMailable;
-        Mail::to('destinatario@correo.com')->send($mail);
-        return view('index');
+        $mail = new sugerenciasMailable; //creo un modelo
+        Mail::to('destinatario@correo.com')->send($mail); //envio el mail
+        return view('index'); //devuelvo la vista indice
       }catch(Exception $e){
-        return $e;
+        return $e; //si falla devuelvo el error
       }
     }
 }

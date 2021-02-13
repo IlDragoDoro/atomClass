@@ -1,5 +1,8 @@
 <?php
-
+/*
+*Este es el modelo donde se guardarán los datos del registro
+*de los usuarios
+*/
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;

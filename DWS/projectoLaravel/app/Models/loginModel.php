@@ -1,5 +1,8 @@
 <?php
-
+/*
+*Este es el modelo donde se guardarán
+* los datos de usuario cuando inicie sesión
+*/
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;

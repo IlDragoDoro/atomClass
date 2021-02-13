@@ -1,5 +1,7 @@
 <?php
-
+/*
+*Creo la tabla para las entradas
+*/
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -27,6 +29,6 @@ class Entradas extends Migration
      */
     public function down()
     {
-        
+
     }
 }

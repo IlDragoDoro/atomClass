@@ -1,6 +1,9 @@
 <?php
-
-namespace App\Mail;
+/*
+*Este es el mailable que devolverá la vista sugerenciasMail
+*para poder enviar un mail
+*/
+namespace App\Mail; //Donde está la ruta
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -11,7 +14,7 @@ class sugerenciasMailable extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject = "Hay una sugerencia nueva!!";
+    public $subject = "Hay una sugerencia nueva!!"; //Es el subject que tendrán todos los correos
 
     /**
      * Create a new message instance.
@@ -30,6 +33,6 @@ class sugerenciasMailable extends Mailable
      */
     public function build()
     {
-        return $this->view('sugerenciaMail');
+        return $this->view('sugerenciaMail'); //Devuelve la vista correspondiente
     }
 }

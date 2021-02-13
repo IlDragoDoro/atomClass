@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class biografiaController extends Controller
 {
     public function __invoke(){
-      return view('biografia');
+      return view('biografia'); //Devuelve la vista biografia
     }
 }
