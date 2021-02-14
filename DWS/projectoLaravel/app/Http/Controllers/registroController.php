@@ -23,7 +23,7 @@ class registroController extends Controller
         $person->email=$data['email'];
         $person->usuario=$data['usuario'];
         $person->contrasenya=$data['contrasenya'];
-        $person->bloggero=$data['blogger'];
+        $person->bloggero=$data['bloggero'];
         //Recojo toda la información en variables
         $person->save(); //guardo el modelo
         return redirect()->to('/welcome'); //Redirecciono al login
