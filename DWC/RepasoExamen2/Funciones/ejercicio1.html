@@ -3,15 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Ejercicio</title>
-    <script src="ejercicio.js"></script>
+    <script src="ejercicio1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <center>
   <body>
-    <h1>Cronómetro</h1>
-    <div id="cronometro" style="width:50%;height:100px;border:1px solid black;">
-    <h1><strong>00:00:00</strong></h1>
-    </div><br>
-    <button style="margin-right:2%;width:10%;height:50px;" type="button" id="start">Start</button><button style="margin-left:2%;width:10%;height:50px;"  type="button" id="stop">Stop</button>
+    <div class="container border mt-5 w-75">
+      <div class="row">
+        <h2 style="margin-left:40%;" class="text-center">Cronómetro</h2>
+      </div>
+      <div class="row">
+        <h1 style="margin-left:38%;padding:3%;" id="time" class="text-center border">00:00:00</h1>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-6">
+          <input style="margin-right: -70%;" class="btn btn-primary" type="button" id="st" value="Start">
+        </div>
+        <div class="col-6">
+          <input style="margin-left: -70%;" class="btn btn-primary" type="button" id="rt" value="Reestablecer">
+        </div>
+      </div>
+      <hr>
+    </div>
   </body>
   </center>
 </html>
