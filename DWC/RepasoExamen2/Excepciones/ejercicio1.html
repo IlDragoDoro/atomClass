@@ -2,10 +2,46 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Ejercicio</title>
-    <script src="ejercicio.js"></script>
+    <script src="ejercicio1.js"></script>
+    <title></title>
   </head>
-  <body>
+  <center>
+  <body style="border:1px solid black;padding:2%;">
+<h1 style="margin-bottom:5px;">Epic Dragon Form</h1>
+<small>Register to convert yourself into a dragon</small><br><br>
+<p>Your data</p>
+<form class="" action="actividad4.html" method="post">
+<input type="text" name="name" id="name" placeholder="Name:" required><br><br>
+<input type="email" name="email" id="email" placeholder="E-mail:"><br><br>
+<input type="tel" id="phone" name="phone" placeholder="123 123 123" pattern="[0-9]{3} [0-9]{3} [0-9]{3}"
+  maxlength="12" title="9 digits number with an space 3-3-3" ><br><br>
+<input type="date" name="birthday" id="birthday" required><label id="bd"></label><br><br>
 
+<p>Date of your first undefined contract:</p>
+<input type="date" name="first" value="" id="first" required disabled><label id="fi"></label><br><br>
+<p>Your password:</p>
+<input min="8" type="password" placeholder="password" id="password" required><br><br>
+<label id="seguridad"></label>
+<input type="password" placeholder="password" id="password2" required><br><br>
+<label id="siuu"></label>
+<ul>
+  <label for="">Music</label>
+  <input id="music" type="checkbox"><br>
+  <label for="">Dance</label>
+  <input id="dance" type="checkbox"><br>
+  <label for="">Tenis</label>
+  <input id="tenis" type="checkbox"><br>
+  <label for="">Anime</label>
+  <input id="anime" type="checkbox"><br>
+  <label for="">Videogames</label>
+  <input id="videogames" type="checkbox"><br>
+  <label for="">Trees</label>
+  <input id="trees" type="checkbox"><br><br>
+</ul>
+<input type="checkbox" id="checkbox"><label>No soy un robot</label> <label id="checked">8+10=</label><input type="number" id="num"><br><br>
+<input type="checkbox"><label>Acepto las condiciones</label><br><br>
+<input type="submit" name="submit" value="Enviar">
+</form>
   </body>
+</center>
 </html>
