@@ -1,26 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var time = document.getElementById('time');
   var st = document.getElementById('st');
   var rt = document.getElementById('rt');
+  var m = document.getElementById('m');
+  var s = document.getElementById('s');
+  var ms = document.getElementById('ms');
+
+  var min = 00;
+  var seg = 00;
+  var miliseg = 00;
   st.onclick = () => {
-    if (st.value == 'Start') {
-      start(time, st);
-    }else {
-      stop(time, st);
-    }
+
+    setInterval(function () {
+      if (miliseg <= 98) {
+        miliseg++;
+        ms.innerHTML = miliseg;
+      } else if (miliseg == 99 && seg <= 58) {
+        seg++;
+        s.innerHTML = seg;
+        miliseg = 00;
+      } else if (seg == 59) {
+        seg = 00;
+        min++;
+        m.innerHTML = min;
+      }
+    }, 10);
+
   };
 });
-
-function start(time, st) {
-  st.value = 'Stop';
-  var ms = 00;
-  time.innerHTML = '00:00:' + ms;
-}
-
-function stop(time, st) {
-  st.value = 'Start';
-}
-
-function reestablece(time, rt) {
-
-}
