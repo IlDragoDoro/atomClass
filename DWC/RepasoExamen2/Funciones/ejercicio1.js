@@ -21,6 +21,6 @@ function stop(time, st) {
   st.value = 'Start';
 }
 
-function reestablecer(time, rt) {
+function reestablece(time, rt) {
 
 }
