@@ -13,7 +13,12 @@ class TablaEntradas extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('entradas', function (Blueprint $table) {
+          $table->id();
+          $table->string('contenido');
+          $table->rememberToken();
+          $table->timestamps();
+          });
     }
 
     /**
@@ -23,11 +28,6 @@ class TablaEntradas extends Migration
      */
     public function down()
     {
-      Schema::create('users', function (Blueprint $table) {
-          $table->id();
-          $table->string('contenido');
-          $table->rememberToken();
-          $table->timestamps();
-      });
+      Schema::dropIfExists('entradas');
     }
 }

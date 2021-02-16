@@ -13,7 +13,15 @@ class TablaUsuarios extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('usuarios', function (Blueprint $table) {
+          $table->id();
+          $table->string('usuario');
+          $table->string('email')->unique();
+          $table->string('password');
+          $table->boolean('bloggero');
+          $table->rememberToken();
+          $table->timestamps();
+        });
     }
 
     /**
@@ -23,14 +31,6 @@ class TablaUsuarios extends Migration
      */
     public function down()
     {
-      Schema::create('usuarios', function (Blueprint $table) {
-          $table->id();
-          $table->string('usuario');
-          $table->string('email')->unique();
-          $table->string('password');
-          $table->boolean('bloggero');
-          $table->rememberToken();
-          $table->timestamps();
-      });
+      Schema::dropIfExists('usuarios');
     }
 }
