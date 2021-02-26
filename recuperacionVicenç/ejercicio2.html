@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio</title>
+    <script src="ejercicio2.js"></script>
+  </head>
+  <body>
+    <!--Creo el formulario:-->
+<form id="form">
+  <center><h1 style="color:white;background-color:black;">CANCELAR SUSCRIPCIÓN</h1></center>
+  <label>Codigo de suscriptor:</label><input type="text" id="code"><br> <label id="error"></label>
+  <p>De que lista quieres eliminar tu suscripción?</p>
+<input id="r1" type="radio"  value="recetas"><label>Recetas</label>
+<input id="r2" type="radio"  value="libros"><label>Libros</label>
+<input id="r3" type="radio"  value="juegos"><label>Juegos</label><br>
+
+<div style="border: 1px solid black;width:50%;">
+<p>Por que motivo quieres darte de baja?</p>
+<input id="uno" type="checkbox"><label>Ya no quiero recibir estos correos</label><br>
+<input id="dos" type="checkbox"><label>Nunca me he inscrito en esta lista</label><br>
+<input id="tres" type="checkbox"><label>Los correos no son adecuados</label><br>
+<input id="cuatro" type="checkbox"><label>Los correos son spam</label><br>
+<input id="check" type="checkbox"><label>Otros(Rellenad a continuación el motivo)</label><br>
+<textarea id="ta" rows="6" cols="40" style="display:none"></textarea>
+</div>
+<p id="txt"></p>
+<button type="button" id="btn" style="margin-top:2%;">Enviar</button>
+</form>
+<img id="img" src="img/subscripcio.png" alt="">
+
+  </body>
+</html>
